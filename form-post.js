@@ -4,13 +4,13 @@ $(document).ready(function () {
     $("#formPost input, #formPost textarea").removeClass("input-error");
   }
 
-  // Cancelar: limpiar formulario
+  
   $("#btnCancelarPost").click(function () {
     $("#formPost")[0].reset();
     limpiarErrores();
   });
 
-  // Validar y guardar
+  
   $("#formPost").submit(function (e) {
     e.preventDefault();
     limpiarErrores();
@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
   });
 
-  // Quitar error al corregir
+  
   $("#formPost input, #formPost textarea").on("input", function () {
     if ($(this).val().trim() !== "") {
       $(this).removeClass("input-error");

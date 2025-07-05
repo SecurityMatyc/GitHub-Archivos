@@ -14,19 +14,19 @@ $(document).ready(function () {
           $('#encabezadoTabla').empty();
         }
 
-        // Generar encabezados
+        
         const keys = Object.keys(data[0]);
         keys.forEach(k => {
           $('#encabezadoTabla').append(`<th>${k.toUpperCase()}</th>`);
         });
 
-        // Generar filas
+        
         data.forEach(obj => {
           const fila = keys.map(k => `<td>${obj[k]}</td>`).join('');
           $('#tablaDatos tbody').append(`<tr>${fila}</tr>`);
         });
 
-        // Inicializar DataTable
+        
         tabla = $('#tablaDatos').DataTable();
       })
       .catch(err => {

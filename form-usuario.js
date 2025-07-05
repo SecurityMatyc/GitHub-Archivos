@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  // Limpiar mensajes de error
+  
   function limpiarErrores() {
     $(".error-message").text("");
   }
 
-  // Validar formato de fecha dd/MM/yyyy
+  
   function validarFecha(fecha) {
     const regex = /^\d{2}\/\d{2}\/\d{4}$/;
     if (!regex.test(fecha)) return false;
@@ -17,13 +17,13 @@ $(document).ready(function () {
     );
   }
 
-  // Cancelar: limpiar formulario
+  
   $("#btnCancelar").click(function () {
     $("#formUsuario")[0].reset();
     limpiarErrores();
   });
 
-  // Validar y guardar
+  
   $("#formUsuario").submit(function (e) {
     e.preventDefault();
     limpiarErrores();
